@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<title>QuizScore</title>
+
+</head>
+
+<body class="bg-dark text-light jumbotron">
+	<h1 class="text-center display-1">QuizScore</h1>
+	<div class="my-5 jumbotron text-dark">
+		<table>
+			<tr>
+				<th class="text-center px-3 display-4">
+					team 1
+				</th>
+				<th class="text-center px-3 display-4">
+					team 2
+				</th>
+				<th class="text-center px-3 display-4">
+					team 3
+				</th>
+				<th class="text-center px-3 display-4">
+					team 4
+				</th>
+				<th class="text-center px-3 display-4">
+					team 5
+				</th>
+				<th class="text-center px-3 display-4">
+					team 6
+				</th>
+				<th class="text-center px-3 display-4">
+					team 7
+				</th>
+				<th class="text-center px-3 display-4">
+					team 8
+				</th>
+			</tr>
+			<tr>
+				<td class="display-1 text-center" id="1">
+					0
+				</td>
+				<td class="display-1 text-center" id="2">
+					0
+				</td>
+				<td class="display-1 text-center" id="3">
+					0
+				</td>
+				<td class="display-1 text-center" id="4">
+					0
+				</td>
+				<td class="display-1 text-center" id="5">
+					0
+				</td>
+				<td class="display-1 text-center" id="6">
+					0
+				</td>
+				<td class="display-1 text-center" id="7">
+					0
+				</td>
+				<td class="display-1 text-center" id="8">
+					0
+				</td>
+			</tr>
+			<tr>
+				<td><button onclick="increment(id)" id="add1"
+						class="btn btn-lg p-3 w-75 mx-4 my-3 btn-success">+</button>
+				</td>
+				<td><button onclick="increment(id)" id="add2"
+						class="btn btn-lg p-3 w-75 mx-4 my-3 btn-success">+</button>
+				</td>
+				<td><button onclick="increment(id)" id="add3"
+						class="btn btn-lg p-3 w-75 mx-4 my-3 btn-success">+</button>
+				</td>
+				<td><button onclick="increment(id)" id="add4"
+						class="btn btn-lg p-3 w-75 mx-4 my-3 btn-success">+</button>
+				</td>
+				<td><button onclick="increment(id)" id="add5"
+						class="btn btn-lg p-3 w-75 mx-4 my-3 btn-success">+</button>
+				</td>
+				<td><button onclick="increment(id)" id="add6"
+						class="btn btn-lg p-3 w-75 mx-4 my-3 btn-success">+</button>
+				</td>
+				<td><button onclick="increment(id)" id="add7"
+						class="btn btn-lg p-3 w-75 mx-4 my-3 btn-success">+</button>
+				</td>
+				<td><button onclick="increment(id)" id="add8"
+						class="btn btn-lg p-3 w-75 mx-4 my-3 btn-success">+</button>
+				</td>
+			</tr>
+			<tr>
+				<td><button onclick="deduct(id)" id="sub1" class="btn btn-lg p-3 w-75 mx-4 my-3 btn-danger">-</button>
+				</td>
+				<td><button onclick="deduct(id)" id="sub2" class="btn btn-lg p-3 w-75 mx-4 my-3 btn-danger">-</button>
+				</td>
+				<td><button onclick="deduct(id)" id="sub3" class="btn btn-lg p-3 w-75 mx-4 my-3 btn-danger">-</button>
+				</td>
+				<td><button onclick="deduct(id)" id="sub4" class="btn btn-lg p-3 w-75 mx-4 my-3 btn-danger">-</button>
+				</td>
+				<td><button onclick="deduct(id)" id="sub5" class="btn btn-lg p-3 w-75 mx-4 my-3 btn-danger">-</button>
+				</td>
+				<td><button onclick="deduct(id)" id="sub6" class="btn btn-lg p-3 w-75 mx-4 my-3 btn-danger">-</button>
+				</td>
+				<td><button onclick="deduct(id)" id="sub7" class="btn btn-lg p-3 w-75 mx-4 my-3 btn-danger">-</button>
+				</td>
+				<td><button onclick="deduct(id)" id="sub8" class="btn btn-lg p-3 w-75 mx-4 my-3 btn-danger">-</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<script>
+		let teamNumber
+		function increment(id) {
+			teamNumber = id.substring(3);
+			document.getElementById(Number(teamNumber)).textContent++;
+		}
+		function deduct(id) {
+			teamNumber = id.substring(3);
+			document.getElementById(Number(teamNumber)).textContent--;
+		}
+	</script>
+
+</body>
+
+</html>
