@@ -6,121 +6,235 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="bootstrap.min.css">
 	<title>QuizScore</title>
+	<style>
+		html body .team {
+			height: 100%;
+		}
 
+		.alignAf {
+			position: absolute;
+			bottom: 1%;
+		}
+
+		.team {
+			display: inline-block;
+		}
+
+		.score {
+			font-size: 10rem;
+		}
+
+		.btn {
+			height: 3.5rem;
+		}
+	</style>
 </head>
 
-<body class="bg-dark text-light jumbotron">
-	<h1 class="text-center display-1">QuizScore</h1>
-	<div class="my-5 jumbotron text-dark">
-		<table>
-			<tr>
-				<th class="text-center px-3 display-4">
-					team 1
-				</th>
-				<th class="text-center px-3 display-4">
-					team 2
-				</th>
-				<th class="text-center px-3 display-4">
-					team 3
-				</th>
-				<th class="text-center px-3 display-4">
-					team 4
-				</th>
-				<th class="text-center px-3 display-4">
-					team 5
-				</th>
-				<th class="text-center px-3 display-4">
-					team 6
-				</th>
-				<th class="text-center px-3 display-4">
-					team 7
-				</th>
-				<th class="text-center px-3 display-4">
-					team 8
-				</th>
-			</tr>
-			<tr>
-				<td class="display-1 text-center" id="1">
-					0
-				</td>
-				<td class="display-1 text-center" id="2">
-					0
-				</td>
-				<td class="display-1 text-center" id="3">
-					0
-				</td>
-				<td class="display-1 text-center" id="4">
-					0
-				</td>
-				<td class="display-1 text-center" id="5">
-					0
-				</td>
-				<td class="display-1 text-center" id="6">
-					0
-				</td>
-				<td class="display-1 text-center" id="7">
-					0
-				</td>
-				<td class="display-1 text-center" id="8">
-					0
-				</td>
-			</tr>
-			<tr>
-				<td><button onclick="increment(id)" id="add1"
-						class="btn btn-lg p-3 w-75 mx-4 my-3 btn-success">+</button>
-				</td>
-				<td><button onclick="increment(id)" id="add2"
-						class="btn btn-lg p-3 w-75 mx-4 my-3 btn-success">+</button>
-				</td>
-				<td><button onclick="increment(id)" id="add3"
-						class="btn btn-lg p-3 w-75 mx-4 my-3 btn-success">+</button>
-				</td>
-				<td><button onclick="increment(id)" id="add4"
-						class="btn btn-lg p-3 w-75 mx-4 my-3 btn-success">+</button>
-				</td>
-				<td><button onclick="increment(id)" id="add5"
-						class="btn btn-lg p-3 w-75 mx-4 my-3 btn-success">+</button>
-				</td>
-				<td><button onclick="increment(id)" id="add6"
-						class="btn btn-lg p-3 w-75 mx-4 my-3 btn-success">+</button>
-				</td>
-				<td><button onclick="increment(id)" id="add7"
-						class="btn btn-lg p-3 w-75 mx-4 my-3 btn-success">+</button>
-				</td>
-				<td><button onclick="increment(id)" id="add8"
-						class="btn btn-lg p-3 w-75 mx-4 my-3 btn-success">+</button>
-				</td>
-			</tr>
-			<tr>
-				<td><button onclick="deduct(id)" id="sub1" class="btn btn-lg p-3 w-75 mx-4 my-3 btn-danger">-</button>
-				</td>
-				<td><button onclick="deduct(id)" id="sub2" class="btn btn-lg p-3 w-75 mx-4 my-3 btn-danger">-</button>
-				</td>
-				<td><button onclick="deduct(id)" id="sub3" class="btn btn-lg p-3 w-75 mx-4 my-3 btn-danger">-</button>
-				</td>
-				<td><button onclick="deduct(id)" id="sub4" class="btn btn-lg p-3 w-75 mx-4 my-3 btn-danger">-</button>
-				</td>
-				<td><button onclick="deduct(id)" id="sub5" class="btn btn-lg p-3 w-75 mx-4 my-3 btn-danger">-</button>
-				</td>
-				<td><button onclick="deduct(id)" id="sub6" class="btn btn-lg p-3 w-75 mx-4 my-3 btn-danger">-</button>
-				</td>
-				<td><button onclick="deduct(id)" id="sub7" class="btn btn-lg p-3 w-75 mx-4 my-3 btn-danger">-</button>
-				</td>
-				<td><button onclick="deduct(id)" id="sub8" class="btn btn-lg p-3 w-75 mx-4 my-3 btn-danger">-</button>
-				</td>
-			</tr>
-		</table>
+<body class="pt-5 mt-5 text-center">
+	<div class="team Adv1">
+		<h1 class="mx-3 mt-5 pt-5 display-4 text-danger">Adv1</h1>
+		<br>
+		<br>
+		<h1 class="mx-3 display-1 score text-danger" id="Adv1Score">0</h1>
+		<div class="alignAf">
+			<div class="btn-group">
+
+				<button onclick="add10(id)" id="add10Adv1" class="btn-sm btn btn-success rounded">
+					<h6 class="m-0 mb-1">+10</h6>
+				</button>
+				<button onclick="add5(id)" id="add5Adv1" class="btn-sm btn btn-success rounded">
+					<h6 class="m-0 mb-1">+5</h6>
+				</button>
+				<button onclick="sub(id)" id="sub5Adv1" class="btn btn-sm btn-danger rounded">
+					<h6 class="m-0 mb-1">-5</h6>
+				</button> <br>
+			</div>
+			<button onclick="eliminate(id)" id="eliAdv1" class="t-3 w-50 btn btn-lg btn-dark m-2">
+				<h2 class="m-0 mb-1">X</h2>
+			</button> <br>
+		</div>
 	</div>
+	<div class="team Adv2">
+		<h1 class="mx-3 mt-5 pt-5 display-4 text-danger">Adv2</h1>
+		<br>
+		<br>
+		<h1 class="mx-3 display-1 score text-danger" id="Adv2Score">0</h1>
+		<div class="alignAf">
+			<div class="btn-group">
+
+				<button onclick="add10(id)" id="add10Adv2" class="btn-sm btn btn-success rounded">
+					<h6 class="m-0 mb-1">+10</h6>
+				</button>
+				<button onclick="add5(id)" id="add5Adv2" class="btn-sm btn btn-success rounded">
+					<h6 class="m-0 mb-1">+5</h6>
+				</button>
+				<button onclick="sub(id)" id="sub5Adv2" class="btn btn-sm btn-danger rounded">
+					<h6 class="m-0 mb-1">-5</h6>
+				</button> <br>
+			</div>
+			<button onclick="eliminate(id)" id="eliAdv2" class="t-3 w-50 btn btn-lg btn-dark m-2">
+				<h2 class="m-0 mb-1">X</h2>
+			</button> <br>
+		</div>
+	</div>
+	<div class="team Ino1">
+		<h1 class="mx-3 mt-5 pt-5 display-4 text-warning">Ino1</h1>
+		<br>
+		<br>
+		<h1 class="mx-3 display-1 score text-warning" id="Ino1Score">0</h1>
+		<div class="alignAf">
+			<div class="btn-group">
+				<button onclick="add10(id)" id="add10Ino1" class="btn-sm btn btn-success rounded">
+					<h6 class="m-0 mb-1">+10</h6>
+				</button>
+				<button onclick="add5(id)" id="add5Ino1" class="btn-sm btn btn-success rounded">
+					<h6 class="m-0 mb-1">+5</h6>
+				</button>
+				<button onclick="sub(id)" id="sub5Ino1" class="btn btn-sm btn-danger rounded">
+					<h6 class="m-0 mb-1">-5</h6>
+				</button> <br>
+			</div>
+			<button onclick="eliminate(id)" id="eliIno1" class="t-3 w-50 btn btn-lg btn-dark m-2">
+				<h2 class="m-0 mb-1">X</h2>
+			</button> <br>
+		</div>
+	</div>
+	<div class="team Ino2">
+		<h1 class="mx-3 mt-5 pt-5 display-4 text-warning">Ino2</h1>
+		<br>
+		<br>
+		<h1 class="mx-3 display-1 score text-warning" id="Ino2Score">0</h1>
+		<div class="alignAf">
+			<div class="btn-group">
+
+				<button onclick="add10(id)" id="add10Ino2" class="btn-sm btn btn-success rounded">
+					<h6 class="m-0 mb-1">+10</h6>
+				</button>
+				<button onclick="add5(id)" id="add5Ino2" class="btn-sm btn btn-success rounded">
+					<h6 class="m-0 mb-1">+5</h6>
+				</button>
+				<button onclick="sub(id)" id="sub5Ino2" class="btn btn-sm btn-danger rounded">
+					<h6 class="m-0 mb-1">-5</h6>
+				</button> <br>
+			</div>
+			<button onclick="eliminate(id)" id="eliIno2" class="t-3 w-50 btn btn-lg btn-dark m-2">
+				<h2 class="m-0 mb-1">X</h2>
+			</button> <br>
+		</div>
+	</div>
+	<div class="team Exp1">
+		<h1 class="mx-3 mt-5 pt-5 display-4 text-primary">Exp1</h1>
+		<br>
+		<br>
+		<h1 class="mx-3 display-1 score text-primary" id="Exp1Score">0</h1>
+		<div class="alignAf">
+			<div class="btn-group">
+
+				<button onclick="add10(id)" id="add10Exp1" class="btn-sm btn btn-success rounded">
+					<h6 class="m-0 mb-1">+10</h6>
+				</button>
+				<button onclick="add5(id)" id="add5Exp1" class="btn-sm btn btn-success rounded">
+					<h6 class="m-0 mb-1">+5</h6>
+				</button>
+				<button onclick="sub(id)" id="sub5Exp1" class="btn btn-sm btn-danger rounded">
+					<h6 class="m-0 mb-1">-5</h6>
+				</button> <br>
+			</div>
+			<button onclick="eliminate(id)" id="eliExp1" class="t-3 w-50 btn btn-lg btn-dark m-2">
+				<h2 class="m-0 mb-1">X</h2>
+			</button> <br>
+		</div>
+	</div>
+	<div class="team Exp2">
+		<h1 class="mx-3 mt-5 pt-5 display-4 text-primary">Exp2</h1>
+		<br>
+		<br>
+		<h1 class="mx-3 display-1 score text-primary" id="Exp2Score">0</h1>
+		<div class="alignAf">
+			<div class="btn-group">
+
+				<button onclick="add10(id)" id="add10Exp2" class="btn-sm btn btn-success rounded">
+					<h6 class="m-0 mb-1">+10</h6>
+				</button>
+				<button onclick="add5(id)" id="add5Exp2" class="btn-sm btn btn-success rounded">
+					<h6 class="m-0 mb-1">+5</h6>
+				</button>
+				<button onclick="sub(id)" id="sub5Exp2" class="btn btn-sm btn-danger rounded">
+					<h6 class="m-0 mb-1">-5</h6>
+				</button> <br>
+			</div>
+			<button onclick="eliminate(id)" id="eliExp2" class="t-3 w-50 btn btn-lg btn-dark m-2">
+				<h2 class="m-0 mb-1">X</h2>
+			</button> <br>
+		</div>
+	</div>
+	<div class="team Tech1">
+		<h1 class="mx-3 mt-5 pt-5 display-4 text-success">Tech1</h1>
+		<br>
+		<br>
+		<h1 class="mx-3 display-1 score text-success" id="Tech1Score">0</h1>
+		<div class="alignAf">
+			<div class="btn-group">
+
+				<button onclick="add10(id)" id="add10Tech1" class="btn-sm btn btn-success rounded">
+					<h6 class="m-0 mb-1">+10</h6>
+				</button>
+				<button onclick="add5(id)" id="add5Tech1" class="btn-sm btn btn-success rounded">
+					<h6 class="m-0 mb-1">+5</h6>
+				</button>
+				<button onclick="sub(id)" id="sub5Tech1" class="btn btn-sm btn-danger rounded">
+					<h6 class="m-0 mb-1">-5</h6>
+				</button> <br>
+			</div>
+			<button onclick="eliminate(id)" id="eliTech1" class="t-3 w-50 btn btn-lg btn-dark m-2">
+				<h2 class="m-0 mb-1">X</h2>
+			</button> <br>
+		</div>
+	</div>
+	<div class="team Tech2">
+		<h1 class="mx-3 mt-5 pt-5 display-4 text-success">Tech2</h1>
+		<br>
+		<br>
+		<h1 class="mx-3 display-1 score text-success" id="Tech2Score">0</h1>
+		<div class="alignAf">
+			<div class="btn-group">
+
+				<button onclick="add10(id)" id="add10Tech2" class="btn-sm btn btn-success rounded">
+					<h6 class="m-0 mb-1">+10</h6>
+				</button>
+				<button onclick="add5(id)" id="add5Tech2" class="btn-sm btn btn-success rounded">
+					<h6 class="m-0 mb-1">+5</h6>
+				</button>
+				<button onclick="sub(id)" id="sub5Tech2" class="btn btn-sm btn-danger rounded">
+					<h6 class="m-0 mb-1">-5</h6>
+				</button> <br>
+			</div>
+			<button onclick="eliminate(id)" id="eliTech2" class="t-3 w-50 btn btn-lg btn-dark m-2">
+				<h2 class="m-0 mb-1">X</h2>
+			</button> <br>
+		</div>
+
+	</div>
+
+	<script src="jquery.min.js"></script>
 
 	<script>
 		let teamNumber
-		function increment(id) {
-			teamNumber = id.substring(3);
-			document.getElementById(Number(teamNumber)).textContent++;
+		function add10(id) {
+			teamNumber = id.substring(5);
+			document.getElementById(teamNumber + "Score").textContent = Number(document.getElementById(teamNumber + "Score").textContent) + 10;
 		}
-		function deduct(id) {
-			teamNumber = id.substring(3);
-			document.getElementById(Number(teamNumber)).textContent--;
+		function add5(id) {
+			teamNumber = id.substring(4);
+			document.getElementById(teamNumber + "Score").textContent = Number(document.getElementById(teamNumber + "Score").textContent) + 5;
+		}
+		function sub(id) {
+			teamNumber = id.substring(4);
+			document.getElementById(teamNumber + "Score").textContent = Number(document.getElementById(teamNumber + "Score").textContent) - 5;
+		}
+
+		function eliminate(id) {
+			$(document.querySelector("#" + id)).parent().parent().fadeOut();
 		}
 	</script>
 
