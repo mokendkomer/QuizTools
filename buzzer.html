@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" onclick="onClick()" onkeydown="onKeyDown(event)">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <style>
+    body,
+    html,
+    .container,
+    .jumbotron {
+      height: 90%;
+    }
+
+    #answer {
+      font-size: 19em;
+    }
+  </style>
+  <title>Buzzer</title>
+</head>
+
+<body class="bg-dark container" onclick="onClick()">
+  <h1 onclick="onClick()" class="display-4 text-light my-3">QuizBuzz</h1>
+  <div onclick="onClick()" class=" jumbotron">
+    <h1 class="text-center display-1 pt-0 mt-0 text-dark" id="answer"></h1>
+  </div>
+  <div class="inner">
+    <p class="text-right text-light">Made by by <a href="https://mukundkumar.com">Mukund</a> in 2019.</p>
+  </div>
+
+
+  <script>
+    let team = '0';
+
+    function onKeyDown(event) {
+      if (
+        team === '0' && (
+          event.key === '1' ||
+          event.key === '2' ||
+          event.key === '3' ||
+          event.key === '4'
+        )) {
+        team = event.key;
+        document.getElementById("answer").innerHTML = event.key
+      }
+    }
+    function onClick() {
+      team = '0';
+      document.getElementById("answer").innerHTML = "";
+    }
+  </script>
+</body>
+
+</html>
